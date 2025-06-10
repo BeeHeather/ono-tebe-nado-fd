@@ -12,7 +12,6 @@
 
 .header__links-list {
   display: flex;
-  flex-direction: row;
   gap: 13px;
   text-transform: lowercase;
   list-style: circle;
@@ -27,11 +26,11 @@
 }
 
 .header__links-list-item_no-bullit {
-  text-decoration: none;
+  list-style: none;
 }
 
 .header__link_active {
-  list-style: none;
+  text-decoration: none;
 }
 
 .header__address {
@@ -51,7 +50,7 @@
   padding: 150px 50px 50px 50px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
-  background-position: -140px 0;
+  background-position: center;
   background-size: cover;
 }
 
@@ -64,6 +63,7 @@
   opacity: 0.6;
   background: #000;
 }
+
 .cover__title {
   position: relative;
   z-index: 1;
@@ -138,7 +138,6 @@
 
 .lots__card-list {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 25px;
   margin-bottom: 30px;
@@ -158,11 +157,15 @@
   align-items: center;
   row-gap: 30px;
   height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card-link {
   z-index: 1;
   height: 100%;
+  text-decoration: none;
 }
 
 .card__title {
@@ -187,23 +190,14 @@
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-repeat: no-repeat;
-  background-position: -115px 0;
-  background-size: cover;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  background-position: -115px 0;
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  background-position: -115px 0;
-  background-size: cover;
 }
 
 .lots__look-more-link {
@@ -214,7 +208,7 @@
 }
 
 .about {
-  padding: 40px 24px 0px;
+  padding: 35px 24px 0px;
   color: #000;
 }
 
@@ -253,14 +247,15 @@
 
 .about__text {
   grid-column: 2;
+  padding-bottom: 24px;
   color: #000;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
 }
 
-.about p:first-of-type {
-  padding-bottom: 24px; /*Добавляем нижний отступ только первому абзацу*/
+.about p:last-of-type {
+  padding-bottom: 0px; /*Обнуляем нижний отступ последнему абзацу*/
 }
 
 .footer {
@@ -289,7 +284,6 @@
 
 .footer__social-list {
   display: flex;
-  flex-direction: row;
   justify-self: end;
   gap: 48px;
   list-style: none;
