@@ -1,16 +1,8 @@
-.content-section {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 1100px;
-  margin: auto;
-}
-
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   padding: 90px 50px 90px 50px;
-  color: #000;
 }
 
 .header__logo-image {
@@ -24,14 +16,14 @@
   gap: 13px;
   text-transform: lowercase;
   list-style: circle;
-  list-style-position: inside;
+  list-style-position: inside; /*Чтобы gap считался с учетом маркера списка*/
 }
 
 .header__menu-link {
   color: #000;
   font-size: 18px;
   line-height: 1.2;
-  text-underline-offset: 4px;
+  text-underline-offset: 4px; /*Опускаю подчеркивание для соответствия макету*/
 }
 
 .header__links-list-item_no-bullit {
@@ -47,10 +39,9 @@
 }
 
 .address {
-  flex-direction: column;
   max-width: 240px;
   font-size: 18px;
-  font-style: normal;
+  font-style: normal; /*Чтобы убрать курсив*/
   line-height: 1.35;
   text-align: left;
 }
@@ -60,7 +51,7 @@
   padding: 150px 50px 50px 50px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
-  background-position: -136px 0;
+  background-position: -140px 0;
   background-size: cover;
 }
 
@@ -68,12 +59,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0; /* Оверлей под текстом */
   width: 100%;
   height: 100%;
-  /* opacity: 0.6;
-  background: #000; */
-  background: rgba(0, 0, 0, 0.6); /* Прозрачность через rgba */
+  opacity: 0.6;
+  background: #000;
 }
 .cover__title {
   position: relative;
@@ -106,12 +95,12 @@
 }
 
 .word-spacing-extended {
-  word-spacing: 18px;
+  word-spacing: 18px; /*Уменьшение расстояния между словами для соответствия макету*/
 }
 
 .bet-button {
   border: 1px solid #fff;
-  padding: 12px 30px;
+  padding: 12px 33px;
   color: #fff;
   font-weight: 500;
   font-size: 22px;
@@ -158,7 +147,7 @@
 
 .lots__card-list-item {
   position: relative;
-  width: 334px;
+  max-width: 334px;
   min-height: 596px;
 }
 
@@ -231,7 +220,7 @@
 
 .about__column {
   display: grid;
-  grid-template-columns: 1fr 2.1fr;
+  grid-template-columns: 1fr 2.1fr; /*Ширина второй колонки задана с учетом gap для карточек lots__card-list*/
   align-items: center;
   column-gap: 30px;
 }
@@ -271,7 +260,7 @@
 }
 
 .about p:first-of-type {
-  padding-bottom: 24px;
+  padding-bottom: 24px; /*Добавляем нижний отступ только первому абзацу*/
 }
 
 .footer {
@@ -286,7 +275,6 @@
 
 .footer__menu-list {
   text-align: center;
-  text-decoration: none;
   list-style: none;
 }
 
